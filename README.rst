@@ -1,8 +1,8 @@
-SocketIO 
-========
+PrivateVPN
+==========
 
-On the server is necessary to have installed nodejs and npm.
+Here it is the data to create the Private VPN
 
-* `Set`_ Systemd
+* `OpenVPN`_ Installer
 
-.. _Set: https://tecadmin.net/run-shell-script-as-systemd-service/
+.. _OpenVPN: https://github.com/Nyr/openvpn-install?tab=readme-ov-file
