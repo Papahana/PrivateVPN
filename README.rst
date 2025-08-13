@@ -1,8 +1,9 @@
 **Private VPN**
 
-Here it is the data to create the Private VPN
+`This`_ repository has the OpenVPN installer
 
 * `OpenVPN`_ Installer
 
-.. _OpenVPN: https://github.com/Nyr/openvpn-install?tab=readme-ov-file
+.. _This: https://github.com/Nyr/openvpn-install?tab=readme-ov-file
+
 
