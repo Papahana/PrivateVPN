@@ -1,5 +1,3 @@
-sdfsd
-
 **Server Side**
 
 Here it is the data to create the Private VPN
