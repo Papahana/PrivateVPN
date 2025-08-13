@@ -1,4 +1,4 @@
-**Server Side**
+**Private VPN**
 
 Here it is the data to create the Private VPN
 
