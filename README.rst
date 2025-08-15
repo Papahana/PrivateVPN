@@ -100,7 +100,7 @@ We need to send this file back to our computer, to do so we can use this command
 
     scp -P <port> <user>@<domain>:/LocalUser.ovpn C:\Users\<user>\Desktop\LocalUser.ovpn
 
-To prevent data loggin from our VPN we need to change the setting **verb** from 3 to 0
+To prevent data logging from your VPN we need to change the setting **verb** from 3 to 0
 
 .. code-block:: bash
 
