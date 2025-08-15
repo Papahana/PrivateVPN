@@ -15,9 +15,9 @@ Change default port of SSH and limit the access to only ipv4.
 .. code-block:: bash
 
     Port <X>
-    AddressFamily inet #Access only ipv4
+    AddressFamily inet  # Access only ipv4
     PermitRootLogin no
-    PasswordAuthentication no
+    PasswordAuthentication no  # Only if we can use a SSH key
     PermitEmptyPasswords no
 
 Usually the VPS provider has a built in firewall, but we can add another to be controlled inside the server.
@@ -112,3 +112,35 @@ So this setting take effect, we can execute this command or reboot the server.
 .. code-block:: bash
 
     sudo systemctl restart openvpn-server@server.service
+
+**SSH Key**
+
+On Windows PowerSheel as admin run this command to install the utility in case necessary.
+
+.. code-block:: bash
+
+     Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
+
+Use this command to generate your pair of keys, if you use RSA 4096 they will be more secure.
+
+.. code-block:: bash
+
+     ssh-keygen -t rsa -b 4096
+
+You can leave the password empty. 
+
+The **Public Key** goes on the server. Run this command to create the folder for the Publi Key.
+
+.. code-block:: bash
+
+     mkdir ~/.ssh && chmod 700 ~/.ssh
+
+Then, run this command to copy the Public Key to the server through the terminal.
+
+.. code-block:: bash
+
+     scp -P <SSH_PORT> $env:USERPROFILE/.ssh/id_rsa.pub <username>@<domain>:~/.ssh/authorized_keys
+
+* `Here`_ you will find more info about this topic.
+
+.. _Here: https://help.clouding.io/hc/es/articles/4746394002972?_gl=1*1xmvv9l*_ga*OTMwMTUwMDk3LjE2OTc4MjkxNDU.*_ga_8HM2208VHR*MTY5OTM4ODIwOS40Mi4xLjE2OTkzODgyNjEuMC4wLjA.*_fplc*Q2c5STBseFhlWDJybWQyMmNaSUVtQW1OZmtVNXJXWHdOaWMwRENmcjBER3hvc2Z1dEI2S1lXYjFZZVdNeEJqVFJTJTJGVzJhZmp5SkVvNFNDbnlzd3JBd1BaM2Vtd3pMSE5nJTJGeG13aHNnQmolMkJuZm9GaEpJTUVlR2RERGgzQnl3JTNEJTNE
