@@ -82,7 +82,7 @@ This repository has the `OpenVPN installer`_ and this are default settings for t
 
 .. _OpenVPN installer: https://github.com/Nyr/openvpn-install?tab=readme-ov-file
 
-* Protocol that OpenVPN should use is UDP, enter the number 1 in the promt
+* Protocol that OpenVPN should use is UDP, enter the number 1 in the prompt
 * The port that OpenVPN should listen to is up to you
 * The DNS is recommended to be number 1
 * The name is also up to you
@@ -91,7 +91,7 @@ Now press enter and the installation process starts.
 
 To create the client file that goes in our PC we need to execute the installer once again.
 
-* In the promt we enter number 1, because we want to add a new client
+* In the prompt we enter number 1, because we want to add a new client
 * The name is up to you, for example "**LocalUser.ovpn**"
 
 We need to send this file back to our computer, to do so we can use this command.
