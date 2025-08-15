@@ -9,3 +9,11 @@
 .. code-block:: bash
 
     scp -P 2732 papahana@papaweb.es:/LocalUser.ovpn C:\Users\ruben\Desktop\LocalUser.ovpn
+
+.. code-block:: bash
+
+    nano /etc/openvpn/server/server.conf
+
+.. code-block:: bash
+
+    sudo systemctl restart openvpn-server@server.service
