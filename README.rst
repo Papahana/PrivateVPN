@@ -113,7 +113,8 @@ So this setting take effect, we can execute this command or reboot the server.
 
     sudo systemctl restart openvpn-server@server.service
 
-**SSH Key**
+SSH Key
+-------
 
 On Windows PowerSheel as admin run this command to install the utility in case necessary.
 
