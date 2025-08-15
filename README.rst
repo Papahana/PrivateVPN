@@ -89,7 +89,7 @@ This repository has the `OpenVPN installer`_ and this are default settings for t
 
 Now press enter and the installation process starts.
 
-To create the client file that goes in our PC we need to execute the installer once again.
+To create the client file that goes in your PC we need to execute the installer once again.
 
 * In the prompt we enter number 1, because we want to add a new client
 * The name is up to you, for example "**LocalUser.ovpn**"
