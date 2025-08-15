@@ -127,7 +127,7 @@ Use this command to generate your pair of keys, if you use RSA 4096 they will be
 
      ssh-keygen -t rsa -b 4096
 
-The Public Key goes on the server. Run this command as non root user to create the folder for the Publi Key.
+The Public Key goes on the server. Run this command as non root user to create the folder for the Public Key.
 
 .. code-block:: bash
 
