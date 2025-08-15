@@ -20,7 +20,7 @@ Change default port of SSH and limit the access to only ipv4.
     PasswordAuthentication no
     PermitEmptyPasswords no
 
-Usually the VPS provider has a builtin firewall, but we can add another to be control insude the server. We can install nftables:
+Usually the VPS provider has a builtin firewall, but we can add another to be control inside the server. We can install nftables:
 
 .. code-block:: bash
 
