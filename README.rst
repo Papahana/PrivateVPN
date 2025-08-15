@@ -121,7 +121,7 @@ On Windows PowerSheel as admin run this command to install the utility in case n
 
      Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
 
-Use this command to generate your pair of keys, if you use RSA 4096 they will be more secure. There is no need to enter data in the following prompt and you can leave the password empty.
+Use this command to generate your pair of keys, if you use RSA 4096 they will be more secure. There is **no need** to enter data in the following prompt and you can leave the **password empty**.
 
 .. code-block:: bash
 
