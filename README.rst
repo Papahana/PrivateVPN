@@ -113,8 +113,7 @@ So this setting take effect, we can execute this command or reboot the server.
 
     sudo systemctl restart openvpn-server@server.service
 
-SSH Key
--------
+**SSH Key**
 
 On Windows PowerSheel as admin run this command to install the utility in case necessary.
 
@@ -122,7 +121,7 @@ On Windows PowerSheel as admin run this command to install the utility in case n
 
      Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
 
-Use this command to generate your pair of keys, if you use RSA 4096 they will be more secure.
+Use this command to generate your pair of keys, if you use RSA 4096 they will be more secure. There is no need to enter data in the following prompt.
 
 .. code-block:: bash
 
@@ -130,7 +129,7 @@ Use this command to generate your pair of keys, if you use RSA 4096 they will be
 
 You can leave the password empty. 
 
-The **Public Key** goes on the server. Run this command to create the folder for the Publi Key.
+The Public Key goes on the server. Run this command to create the folder for the Publi Key.
 
 .. code-block:: bash
 
