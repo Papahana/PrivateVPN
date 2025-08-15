@@ -78,19 +78,36 @@ Every time a change is made in the file **nftables.conf**, you need to execute t
 
      systemctl restart nftables
 
-* This repository has the `OpenVPN installer`_ and this `YouTube video`_ has a step by step process to the installation
+This repository has the `OpenVPN installer`_ and this are default settings for the first getting started
 
 .. _OpenVPN installer: https://github.com/Nyr/openvpn-install?tab=readme-ov-file
 
-.. _YouTube video: https://www.youtube.com/watch?v=zsjBrsw9IFU&ab_channel=RackNerd
+* Protocol that OpenVPN should use is UDP, enter the number 1 in the promt
+* The port that OpenVPN should listen to is up to you
+* The DNS is recommended to be number 1
+* The name is also up to you
+
+Now press enter and the installation process starts.
+
+To create the client file that goes in our PC we need to execute the installer once again.
+
+* In the promt we enter number 1, because we want to add a new client
+* The name is up to you, for example "**LocalUser.ovpn**"
+
+We need to send this file back to our computer, to do so we can use this command.
 
 .. code-block:: bash
 
-    scp -P 2732 papahana@papaweb.es:/LocalUser.ovpn C:\Users\ruben\Desktop\LocalUser.ovpn
+    scp -P <port> <user>@<domain>:/LocalUser.ovpn C:\Users\<user>\Desktop\LocalUser.ovpn
+
+To prevent data loggin from our VPN we need to change the setting **verb** from 3 to 0
 
 .. code-block:: bash
 
     nano /etc/openvpn/server/server.conf
+    verb 0
+
+So this setting take effect, we can execute this command or reboot the server.
 
 .. code-block:: bash
 
