@@ -20,7 +20,7 @@ Change default port of SSH and limit the access to only ipv4.
     PasswordAuthentication no
     PermitEmptyPasswords no
 
-Usually the VPS provider has a builtin firewall, but we can add another to be control inside the server. We can install nftables:
+Usually the VPS provider has a built in firewall, but we can add another to be controlled inside the server.
 
 .. code-block:: bash
 
@@ -52,10 +52,11 @@ This code goes in "/etc/nftables.conf".
           chain input {
                type filter hook input priority 0; policy drop;
                iif "lo" counter accept
-               tcp dport 3240 counter accept
-               tcp dport 7594 counter accept
-               tcp sport 587 counter accept
-               udp sport 53 counter accept
+               tcp sport 80 accept
+               tcp sport 443 accept
+               tcp sport 2732 accept
+               udp sport 53 accept
+               udp sport 3240 accept
           }
      
           chain forward {
@@ -65,10 +66,9 @@ This code goes in "/etc/nftables.conf".
           chain output {
                type filter hook output priority 0; policy drop;
                oif "lo" counter accept
-               tcp sport 3240 counter accept
-               tcp sport 7594 counter accept
-               tcp dport 587 counter accept
-               udp dport 53 counter accept
+               tcp dport 80 accept
+               tcp dport 443 accept
+               udp dport 53 accept
           }
      }
 
