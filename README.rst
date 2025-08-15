@@ -70,7 +70,7 @@ This code goes in "/etc/nftables.conf".
     table ip nat {
             chain postrouting {
                     type nat hook postrouting priority 100;
-                    iif "tun0" oif "eth0" ip saddr 0.0.0.0/0 masquerade
+                    iif "tun0" oif "eth0" ip saddr 0.0.0.0/0 masquerade  # IP de la interfaz VPN
             }
             chain prerouting {
                     type nat hook prerouting priority 0;
