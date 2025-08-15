@@ -44,33 +44,38 @@ This code goes in "/etc/nftables.conf".
 
 .. code-block:: bash
 
-     #!/sbin/nft -f
+#!/sbin/nft -f
 
-     flush ruleset
-     
-     table inet filter {
-          chain input {
-               type filter hook input priority 0; policy drop;
-               iif "lo" counter accept
-               tcp sport 80 accept
-               tcp sport 443 accept
-               tcp sport 2732 accept
-               udp sport 53 accept
-               udp sport 3240 accept
-          }
-     
-          chain forward {
-               type filter hook forward priority 0; policy drop;
-          }
-     
-          chain output {
-               type filter hook output priority 0; policy drop;
-               oif "lo" counter accept
-               tcp dport 80 accept
-               tcp dport 443 accept
-               udp dport 53 accept
-          }
-     }
+flush ruleset
+
+table inet filter {
+        chain input {
+                type filter hook input priority 0; policy drop;
+                iif "lo" accept
+                ct state established,related accept
+                udp dport 3240 accept
+                iif "tun0" accept
+                tcp dport 2732 accept
+        }
+        chain forward {
+                type filter hook forward priority 0; policy drop;
+                iif "tun0" accept
+                oif "tun0" accept
+        }
+        chain output {
+                type filter hook output priority 0; policy accept;
+        }
+}
+
+table ip nat {
+        chain postrouting {
+                type nat hook postrouting priority 100;
+                iif "tun0" oif "eth0" ip saddr 0.0.0.0/0 masquerade
+        }
+        chain prerouting {
+                type nat hook prerouting priority 0;
+        }
+}
 
 Every time a change is made in the file **nftables.conf**, you need to execute this command.
 
