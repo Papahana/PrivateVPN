@@ -138,7 +138,3 @@ Then, run this command to copy the Public Key to the server through the terminal
 .. code-block:: bash
 
      scp -P <SSH_PORT> $env:USERPROFILE/.ssh/id_rsa.pub <username>@<domain>:~/.ssh/authorized_keys
-
-* `Here`_ you will find more info about this topic.
-
-.. _Here: https://help.clouding.io/hc/es/articles/4746394002972?_gl=1*1xmvv9l*_ga*OTMwMTUwMDk3LjE2OTc4MjkxNDU.*_ga_8HM2208VHR*MTY5OTM4ODIwOS40Mi4xLjE2OTkzODgyNjEuMC4wLjA.*_fplc*Q2c5STBseFhlWDJybWQyMmNaSUVtQW1OZmtVNXJXWHdOaWMwRENmcjBER3hvc2Z1dEI2S1lXYjFZZVdNeEJqVFJTJTJGVzJhZmp5SkVvNFNDbnlzd3JBd1BaM2Vtd3pMSE5nJTJGeG13aHNnQmolMkJuZm9GaEpJTUVlR2RERGgzQnl3JTNEJTNE
