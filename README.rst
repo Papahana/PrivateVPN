@@ -1,6 +1,6 @@
 **Private VPN**
 
-The first security step that needs to be taken care of is adding a new user and removing root from login.
+The first security step is adding a new user and removing root from login.
 
 .. code-block:: bash
 
