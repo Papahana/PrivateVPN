@@ -1,5 +1,14 @@
 **Private VPN**
 
+The first security step that needs to be taken care of is adding a new user and removing root from login.
+
+.. code-block:: bash
+
+    dduser <name>
+    usermod -aG sudo <username>
+        - Deactivate root login in "sudo nano /etc/ssh/sshd_config" with "PermitRootLogin no".
+        - Then "/etc/init.d/ssh restart"
+
 * This repository has the `OpenVPN installer`_ and this `YouTube video`_ has a step by step process to the installation
 
 .. _OpenVPN installer: https://github.com/Nyr/openvpn-install?tab=readme-ov-file
