@@ -69,7 +69,7 @@ This code goes in "/etc/nftables.conf".
                     ct state established,related accept
                     udp dport 3240 accept
                     iif "tun0" accept
-                    tcp dport 2732 accept
+                    tcp dport <port> accept  # SSH Port
             }
             chain forward {
                     type filter hook forward priority 0; policy drop;
