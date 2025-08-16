@@ -157,3 +157,9 @@ Then, run this command to copy the Public Key to the server through the terminal
 .. code-block:: bash
 
      scp -P <SSH_PORT> $env:USERPROFILE/.ssh/id_rsa.pub <username>@<domain>:~/.ssh/authorized_keys
+
+This command can be used in **Zenmap** to check the server security.
+
+.. code-block:: bash
+
+    nmap -sS -sU -p 1-65535 -T4 -A -v papaweb.es
