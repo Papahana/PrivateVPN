@@ -67,7 +67,7 @@ This code goes in "/etc/nftables.conf".
                     type filter hook input priority 0; policy drop;
                     iif "lo" accept
                     ct state established,related accept
-                    udp dport 3240 accept
+                    udp dport <port> accept  # VPN Port
                     iif "tun0" accept
                     tcp dport <port> accept  # SSH Port
             }
