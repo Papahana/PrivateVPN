@@ -1,6 +1,20 @@
 Private VPN
 ===========
 
+Use this commands to setup the server.
+
+.. code-block:: bash
+
+    sudo apt-get -y remove nano
+    
+    sudo apt-get -y update
+    sudo apt-get -y upgrade
+    
+    sudo apt-get -y install nano
+    sudo apt install -y locate
+    
+    sudo updatedb
+
 The first security step is adding a new user and removing root from login.
 
 .. code-block:: bash
