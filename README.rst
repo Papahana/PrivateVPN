@@ -19,7 +19,7 @@ The first security step is adding a new user and removing root from login.
 
 .. code-block:: bash
 
-    dduser <name>
+    adduser <name>
     usermod -aG sudo <username>
         - Deactivate root login in "sudo nano /etc/ssh/sshd_config" with "PermitRootLogin no".
         - Then "/etc/init.d/ssh restart"
