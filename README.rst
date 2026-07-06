@@ -1,5 +1,5 @@
-Private VPN
-===========
+Private VPN 🔒
+==============
 
 Use this commands to setup the server.
 
